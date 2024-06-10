@@ -1,0 +1,11 @@
+{
+    "name": "WaitList",
+    "short_name": "WaitList",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [{
+        "src": "./favicon.ico",
+        "sizes": "any"
+    }]
+}

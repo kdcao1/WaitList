@@ -1,0 +1,9 @@
+.button {
+    &:disabled,
+    &[data-disabled] {
+        background-color: transparent;
+        justify-content: space-between;
+        color: black;
+        padding-left: 0;
+    }
+  }
