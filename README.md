@@ -4,7 +4,7 @@
 Fullstack reservation and waitlist web app built for Hibachi style restaurants
 
 Examples:
-- CSP using Next.JS middlware
+- CSP using Next.JS middleware
 - PocketBase realtime subscriptions
 - PocketBase dymanic filtering
 - Mantine Forms
