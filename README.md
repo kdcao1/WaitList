@@ -17,8 +17,8 @@ Examples:
 - Uses middleware for CSP headers and nonce application
 - Uses App Router from Next.JS 14
 - Seperate web interface for employees and guests
-- Mobile depolyment through Docker
-- Specialized for Hibachi resturants
+- Mobile deployment through Docker
+- Specialized for Hibachi restaurants
 
 
 ## Optimizations
