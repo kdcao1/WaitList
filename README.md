@@ -1,5 +1,7 @@
 # WaitList
 
+![image](https://github.com/user-attachments/assets/89d2068a-8f0c-4172-8ace-21ecd1e9e1ab)
+
 **Fullstack reservation and waitlist web app built for Hibachi-style restaurants.**
 
 ## Examples of Implementation
