@@ -1,121 +1,113 @@
-
 # WaitList
 
-Fullstack reservation and waitlist web app built for Hibachi style restaurants
+**Fullstack reservation and waitlist web app built for Hibachi-style restaurants.**
 
-Examples:
-- CSP using Next.JS middleware
-- PocketBase realtime subscriptions
-- PocketBase dymanic filtering
-- Mantine Forms
-- Server and Cient Cookies
+## Examples of Implementation
+
+- CSP using Next.js middleware  
+- PocketBase real-time subscriptions  
+- PocketBase dynamic filtering  
+- Mantine Forms  
+- Server and client-side cookie handling  
 
 ## Features
 
-- Realtime Updates between client and server
-- Progressive Web App support for IOS
-- Uses middleware for CSP headers and nonce application
-- Uses App Router from Next.JS 14
-- Seperate web interface for employees and guests
-- Mobile deployment through Docker
-- Specialized for Hibachi restaurants
-
+- Real-time updates between clients and server via PocketBase subscriptions  
+- Progressive Web App (PWA) support for iOS with installable app-like experience  
+- Content Security Policy (CSP) headers and nonce handling via middleware  
+- Automatic daily reservation loading with check-in tracking  
+- Real-time wait time tracking, including how long groups have waited  
+- Automatic wait time suggestions based on number of chefs and queue size  
+- Auto text notifications when tables are ready or as reservation reminders  
+- History view for tracking past reservations and waitlist data  
+- Guest-facing page to view waitlist status and position  
+- Party readiness tracking ("Everyone is present and ready to be seated")  
+- Detailed pages for reservations and waitlisted parties with timestamps and statuses  
+- Multi-location support with consolidated management dashboard  
+- Separate interfaces for employees and guests  
+- Specialized design for Hibachi restaurant workflows  
+- Dockerized deployment for ease of scaling and portability  
 
 ## Optimizations
 
-- Server Sided Rendering (SSR)
-- Streaming with suspense
-- Dynamic routing
+- Server-Side Rendering (SSR)  
+- Streaming with `React.Suspense`  
+- Dynamic routing using Next.js App Router (v14)  
 
 ## Installation
 
-- Setup PocketBase: https://pocketbase.io/
-- Install next.js: https://nextjs.org/docs/getting-started/installation
-- Install npm packages
-- Clone files into nextjs project
-- Change generic fields. (see below)
-- Deploy
+1. [Set up PocketBase](https://pocketbase.io/)  
+2. [Install Next.js](https://nextjs.org/docs/getting-started/installation)  
+3. Install dependencies with `npm install`  
+4. Clone this repo into your Next.js project  
+5. Update generic fields (see below)  
+6. Deploy
 
-#### Optional Changes
-- Style through theme.ts (Mantine) or Tailwind class names
-- Delete CSP headers through middleware.ts
+### Optional Configuration
+
+- Customize styling via `theme.ts` (Mantine) or Tailwind class names  
+- CSP headers can be removed by editing `middleware.ts`  
+
 ## Deployment
 
-To deploy this project 
+Run locally or deploy via Docker.  
 
-Default port: 3000
+**Default Port:** `3000`
 
 ```bash
-  Dev mode: npm run dev 
-  Prod mode: npm run build => npm run start
+# Development
+npm run dev
+
+# Production
+npm run build && npm start
 ```
 
-Contains a Dockerfile for Docker deployments
+A `Dockerfile` is included for containerized deployments.
 
-## Generics
+## Configuration
 
-To run this project, you will need to change the following variables to each file:
+Update the following values before deployment:
 
-`PocketBaseUrl`: pocketbase.js and middleware.ts
+| Variable         | Location(s)                       |
+|------------------|-----------------------------------|
+| `PocketBaseUrl`  | `pocketbase.js`, `middleware.ts`  |
+| `url`            | `middleware.ts` (your hosted domain) |
+| `TZ`             | `Dockerfile` (your timezone)      |
+| `PORT`           | `Dockerfile` (optional override)  |
+| `logo.png`       | `public/` directory               |
 
-`url`: middleware.ts (hosted site link)
-
-`TZ`: Dockerfile (follow your time zone)
-
-`PORT`: Dockerfile (optional, change port in Docker container)
-
-`logo.png`: add a logo into public folder
 ## Tech Stack
 
-**Client:** React, NextJs, TailwindCSS, Mantine
-
-**Server:** NodeJS, TypeScript, PocketBase, Docker
-
+**Frontend:** React, Next.js, TailwindCSS, Mantine  
+**Backend:** Node.js, TypeScript, PocketBase  
+**Deployment:** Docker  
 
 ## Used By
 
-This project is used by the following companies:
-
 - Volcano Steak & Sushi
-
-
-
 
 ## Acknowledgements
 
- - [Next.JS](https://nextjs.org/docs)
- - [Mantine](https://mantine.dev/getting-started/)
- - [PocketBase](https://pocketbase.io/docs/)
- - [TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
- - [TailwindCSS](https://tailwindcss.com/docs/installation)
- - [Docker](https://docs.docker.com/desktop/)
-
+- [Next.js](https://nextjs.org/docs)  
+- [Mantine](https://mantine.dev/getting-started/)  
+- [PocketBase](https://pocketbase.io/docs/)  
+- [TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)  
+- [TailwindCSS](https://tailwindcss.com/docs/installation)  
+- [Docker](https://docs.docker.com/desktop/)
 
 ## Authors
 
-- [@xSolo101](https://github.com/xSolo101)
+- [@xSolo101](https://github.com/xSolo101)  
 - [@KaiR332](https://github.com/KaiR332)
 
 ## License
 
+**WaitList**  
+© 2024 Kevin Lin
 
-WaitList
+Distributed under the [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/).  
+This software is provided "as-is" without warranty of any kind.
 
-Copyright (C) 2024  Kevin Lin
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/).
 ## Feedback
 
-If you have any feedback, please reach out to us at kdcao1@yahoo.com
-
+If you have any feedback, please reach out to us at: kdcao1@yahoo.com
